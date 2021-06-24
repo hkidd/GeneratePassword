@@ -7,7 +7,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
@@ -45,44 +44,37 @@ function generatePassword() {
   // For uppercase:
   var upper = confirm("Would you like uppercase characters?");
     if (upper === true) {
-      // This concatenates the uppercase letters onto the originally empty passwordArray
+      // This concatenates the uppercase letters onto the originally empty passwordArray if true
       passwordArray = passwordArray.concat(upperCase)
-    } 
-
+    }
     // For lowercase:
   var lower = confirm("Would you like lowercase characters?");
-    // This concatenates the lowercase letters onto the existing passwordArray
+    // This concatenates the lowercase letters onto the existing passwordArray, or, onto an empty array
     if (lower === true && passwordArray.length >= 0) {
       passwordArray = passwordArray.concat(lowerCase)
-
-      // This concatenates the lowercase letters onto the still empty passwordArray
     } else if (lower === true && passwordArray.length === 0) {
       passwordArray += lowerCase
     }
 
     // For special characters:
   var special = confirm("Would you like special characters?");
-    // This concatenates the special characters onto the existing passwordArray
-    if (special === true && passwordArray.length >= 0) {
+    // This concatenates the special characters onto the existing passwordArray, or, onto an empty array
+    if (special === true && passwordArray.length >= 0) { 
       passwordArray = passwordArray.concat(specialChar)
-
-    // This concatenates the special characters onto the still empty passwordArray
     } else if (special === true && passwordArray.length === 0) {
       passwordArray += specialChar
-    } 
+    }
 
     // For numbers: (will include numbers in the array if everything else is false)
   var num = confirm("Would you like numbers?");
-    // This concatenates the numbers onto the existing passwordArray
+    // This concatenates the numbers onto the existing passwordArray, or, onto the empty passwordArray even if they say no, so that something is given
     if (num === true && passwordArray.length >= 0) {
       passwordArray = passwordArray.concat(number)
-
-    // This concatenates the numbers onto the passwordArray even if they say no, so that something is given
     } else if (num === false && passwordArray.length === 0) {
       passwordArray = passwordArray.concat(number)
-    } 
-    
-  // Random password variable actually generated
+    }
+
+  // Random password variable generated
   var randomPassword = [];
 
   // Loop through designated array length (charLength times), and pass in random characters or numbers depending on what variables are true (confirmed statements)
