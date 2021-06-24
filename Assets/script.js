@@ -47,6 +47,7 @@ function generatePassword() {
       // This concatenates the uppercase letters onto the originally empty passwordArray if true
       passwordArray = passwordArray.concat(upperCase)
     }
+    
     // For lowercase:
   var lower = confirm("Would you like lowercase characters?");
     // This concatenates the lowercase letters onto the existing passwordArray, or, onto an empty array
