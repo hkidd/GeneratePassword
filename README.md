@@ -45,10 +45,35 @@ After creating all of the character variables, the user is then asked (using a p
 
 
 
-Then, using confirm statements, the user chooses what types of characters they would like to include.  Those character arrays are concatenated onto the (initially) empty passwordArray.  Numbers are automatically given if the user declines all options.  Here's an example of the lowercase if else statement:
+Then, using confirm statements, the user chooses what types of characters they would like to include.  Those character arrays are concatenated onto the (initially) empty passwordArray.  Numbers are automatically given if the user declines all options.  Example of the lowercase if else statement:
 
 <img src="Assets/images/lowercase_if_else.png" width=70% height=auto />
 
 
 
+Finally, a for loop is used to loop through the passwordArray, containing all the newly concatenated character arrays, charLength (number from inital user input) times, and random characters/numbers are passed in depending on which were true (confirmed statements).  The randomly generated password is then returned and is presented to the user:
 
+<img src="Assets/images/pw_for_loop.png" width=70% height=auto>
+
+
+
+## End result
+This is indeed a fully functioning password generator, and my first JavaScript project!
+
+
+
+## Made with the help and guidance of 
+Christian Henry - TA
+Brandon Norsworthy
+Jessamyn McTwigan 
+Jacob Guiro
+David Gauthier
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+Harrison Kidd
+
+harrisonakidd@gmail.com
