@@ -63,11 +63,11 @@ This is indeed a fully functioning password generator, and my first JavaScript p
 
 
 ## Made with the help and guidance of 
-Christian Henry - TA
-Brandon Norsworthy
-Jessamyn McTwigan 
-Jacob Guiro
-David Gauthier
+Christian Henry - TA <br>
+Brandon Norsworthy <br>
+Jessamyn McTwigan <br>
+Jacob Guiro <br>
+David Gauthier <br>
 
 
 ## License
