@@ -42,32 +42,42 @@ function generatePassword() {
   // Write if statements to check what needs to be included in password
   // ex if upper = true, add the upperCase array to the passwordArr array
 
-  // For uppercase
+  // For uppercase:
   var upper = confirm("Would you like uppercase characters?");
     if (upper === true) {
+      // This concatenates the uppercase letters onto the originally empty passwordArray
       passwordArray = passwordArray.concat(upperCase)
     } 
 
-    // For lowercase
+    // For lowercase:
   var lower = confirm("Would you like lowercase characters?");
+    // This concatenates the lowercase letters onto the existing passwordArray
     if (lower === true && passwordArray.length >= 0) {
       passwordArray = passwordArray.concat(lowerCase)
+
+      // This concatenates the lowercase letters onto the still empty passwordArray
     } else if (lower === true && passwordArray.length === 0) {
       passwordArray += lowerCase
     }
 
-    // For special characters
+    // For special characters:
   var special = confirm("Would you like special characters?");
+    // This concatenates the special characters onto the existing passwordArray
     if (special === true && passwordArray.length >= 0) {
       passwordArray = passwordArray.concat(specialChar)
+
+    // This concatenates the special characters onto the still empty passwordArray
     } else if (special === true && passwordArray.length === 0) {
       passwordArray += specialChar
     } 
 
-    // For numbers (will include numbers in the array if everything else is false)
+    // For numbers: (will include numbers in the array if everything else is false)
   var num = confirm("Would you like numbers?");
+    // This concatenates the numbers onto the existing passwordArray
     if (num === true && passwordArray.length >= 0) {
       passwordArray = passwordArray.concat(number)
+
+    // This concatenates the numbers onto the passwordArray even if they say no, so that something is given
     } else if (num === false && passwordArray.length === 0) {
       passwordArray = passwordArray.concat(number)
     } 
@@ -75,8 +85,7 @@ function generatePassword() {
   // Random password variable actually generated
   var randomPassword = [];
 
-  // Loop through designated array length (charLength.length times), and pass in random characters or numbers depending on what variables are true (confirm statements)
-
+  // Loop through designated array length (charLength times), and pass in random characters or numbers depending on what variables are true (confirmed statements)
   for (var i = 0; i < charLength; i++) {
     var index = Math.floor(Math.random() * passwordArray.length)
      randomPassword += passwordArray[index];
