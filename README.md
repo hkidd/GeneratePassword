@@ -1,7 +1,7 @@
 # GeneratePassword_HW3
 Homework assignment 3 - Generating a random password using JavaScript
 
-Link to the live page:
+Link to the live page: https://hkidd.github.io/GeneratePassword_HW3/
 
 ## Purpose
 The purpose of this activity was to take a small amount of starter code, and create a fully functional password generator.  This generator takes user imputs to see how many characters they would like in the password (between 8 and 128), then if they would like to include lowercase, uppercase, special, and/or special characters.  After the code runs, the user is presented with a randomly generated password.
