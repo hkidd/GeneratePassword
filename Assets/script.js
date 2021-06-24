@@ -28,9 +28,11 @@ function generatePassword() {
 
   // If user does not imput a number between 8 and 128 they will be asked again
   if (isNaN(charLength)) {
-      charLength = parseInt (prompt("How many total characters would you like? Min = 8, Max = 128", 8));
+    alert("Sorry, you must provide a number of characters");
+    charLength = parseInt (prompt("How many total characters would you like? Min = 8, Max = 128", 8));
   } else if (charLength < 8 || charLength > 128) {
-    charLength = parseInt (prompt("How many total characters would you like? Min = 8, Max = 128", 8))
+    alert("Sorry, you must provide a number of characters between 8 and 128");
+    charLength = parseInt (prompt("How many total characters would you like? Min = 8, Max = 128", 8));
   } 
 
   // Initialize the password array for characters/numbers to be passed into
@@ -44,7 +46,7 @@ function generatePassword() {
     if (upper === true) {
       passwordArray = passwordArray.concat(upperCase)
     } 
-    console.log(passwordArray)
+    // console.log(passwordArray)
 
     // For lowercase
   var lower = confirm("Would you like lowercase characters?");
@@ -53,7 +55,7 @@ function generatePassword() {
     } else if (lower === true && passwordArray.length === 0) {
       passwordArray += lowerCase
     }
-    console.log(passwordArray)
+    // console.log(passwordArray)
 
     // For special characters
   var special = confirm("Would you like special characters?");
@@ -62,7 +64,7 @@ function generatePassword() {
     } else if (special === true && passwordArray.length === 0) {
       passwordArray += specialChar
     } 
-    console.log(passwordArray)
+    // console.log(passwordArray)
 
     // For numbers (will include numbers in the array if everything else is false)
   var num = confirm("Would you like numbers?");
@@ -71,8 +73,7 @@ function generatePassword() {
     } else if (num === false && passwordArray.length === 0) {
       passwordArray += number
     } 
-    console.log(passwordArray)
-    
+    // console.log(passwordArray)
     
   // Random password variable actually generated
   var randomPassword = [];
