@@ -1,4 +1,4 @@
-# GeneratePassword_HW3
+# GeneratePassword
 Homework assignment 3 - Generating a random password using JavaScript
 
 Link to the live page: https://hkidd.github.io/GeneratePassword_HW3/
